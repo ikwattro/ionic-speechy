@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Speechy
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Is listening ? : {{ isListening }}</p>
+  <button ion-button (click)="getPermission()">Get Permission</button>
+  <button ion-button (click)="listen()">
+    <div>
+      <ion-icon name="mic">
+        <label>Speak to me</label>
+      </ion-icon>
+    </div>
+  </button>
+
+  <ion-card>
+    <ion-card-content *ngFor="let match of matches">
+      <p>{{ match }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
